@@ -1,6 +1,6 @@
 package PQExercise;
 
-public class QuickPopPQ <T extends Comparable> implements IQuickPopPQ{
+public class QuickPopPQ <T extends Comparable> implements IPriorityQueue{
     PqNode head = null;
     Object lock = new Object();
 
