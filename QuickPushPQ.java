@@ -1,6 +1,6 @@
 package PQExercise;
 
-public class QuickPushPQ <T extends Comparable> {
+public class QuickPushPQ  <T extends Comparable> implements IQuickPushPQ{
     PqNode head = null;
     Object lock = new Object();
 
@@ -20,6 +20,7 @@ public class QuickPushPQ <T extends Comparable> {
     }
 
     // O(n)
+    @Override
     public T pop(){
         synchronized (lock) {
             PqNode max = null;
@@ -35,7 +36,8 @@ public class QuickPushPQ <T extends Comparable> {
     }
 
     // O(1)
-    public void push(T data) {
+    @Override
+    public void push(Comparable data) {
         synchronized (lock) {
             PqNode newNode = new PqNode(data);
             if (head == null) {

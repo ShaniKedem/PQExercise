@@ -1,6 +1,6 @@
 package PQExercise;
 
-public class QuickPopPQ <T extends Comparable> {
+public class QuickPopPQ <T extends Comparable> implements IQuickPopPQ{
     PqNode head = null;
     Object lock = new Object();
 
@@ -20,6 +20,7 @@ public class QuickPopPQ <T extends Comparable> {
     }
 
     // O(1)
+    @Override
     public T pop(){
         T dataToReturn = null;
         synchronized (lock){
@@ -37,8 +38,9 @@ public class QuickPopPQ <T extends Comparable> {
         return dataToReturn;
     }
 
-    // O(n)
-    public void push(T data) {
+    //O(n)
+    @Override
+    public void push(Comparable data) {
         synchronized (lock) {
             PqNode runner = head;
             PqNode prev = head;
@@ -59,15 +61,6 @@ public class QuickPopPQ <T extends Comparable> {
         }
     }
 
-    public void printList(){
-        PqNode runner = head;
-        while (runner != null)
-        {
-            System.out.print(runner.getData() + ", ");
-            runner = runner.next;
-        }
-        System.out.println("");
-    }
 
     private void connectNewNode(PqNode insertBefore, PqNode previous, PqNode newNode){
        //insert to the end of the list
