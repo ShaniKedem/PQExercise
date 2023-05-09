@@ -1,6 +1,6 @@
 # PQ Exercise
 ## QuickPopPQ and QuickPushPQ
-QuickPopPQ and QuickPushPQ are Java classes that implements a priority queue data structure without using built-in Java data structure. 
+QuickPopPQ and QuickPushPQ are classes that implements a priority queue data structure without using built-in Java data structure. 
 It allows elements to be added to the queue and removes them in order of priority. The class uses a linked list to implement the queue.
 
 ## requirements
@@ -18,23 +18,22 @@ T is a generic type parameter that extends Comparable.
 Object lock is a private object used for synchronization purposes in the pop and push methods.
 
 ## Methods 
-The QuickPopPQ class and QuickPush PQcontains the following methods:
-
 ### QuickPopPQ
-#### pop
-
+#### pop 
+This method removes and returns the element with the highest priority from the queue. 
+The method has a time complexity of O(1) - Remove the element placed at the head.
 #### push
+This method adds a new element to the queue. The element is inserted at the appropriate position to maintain the order of priority.
+The method has a time complexity of O(n)
 
 
 ### QuickPushPQ
 #### pop
-#### push
-### pop
 This method removes and returns the element with the highest priority from the queue. 
-QuickPopPQ The method has a time complexity of O(1) - Remove the element placed at the head.
-QuickPush The method has a time complexity of O(n) - Searches for the element with the highest priority and removes it.
-
-### push
+Searches for the element with the highest priority and removes it.
+The method has a time complexity of O(n).
+#### push
 This method adds a new element to the queue. 
-QuickPopPQ - The element is inserted at the appropriate position to maintain the order of priority. The method has a time complexity of O(n).
-QuickPush - 
+it placed the new element at the head of the queue.
+The method has a time complexity of O(1).
+
