@@ -4,10 +4,11 @@ QuickPopPQ and QuickPushPQ are classes that implements a priority queue data str
 It allows elements to be added to the queue and removes them in order of priority. The class uses a linked list to implement the queue.
 
 ## requirements
-QuickPopPQ -  push in o(n)
+A. QuickPopPQ -  push in o(n)
               pop in o(1)
-QuickPushPQ - push in o(1)
+B. QuickPushPQ - push in o(1)
               pop in o(n)
+C. Thread-safe DS
 
 # Class Structure
 The classes contains private inner class PqNode and Object lock - to enable multi-threaded enviroment.
